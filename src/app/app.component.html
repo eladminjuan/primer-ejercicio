@@ -1,0 +1,32 @@
+<label>Nombre</label>
+<input type="text" class="form-control" [(ngModel)]="nombre"/>
+<br>
+<div class="btn-group btn-group-toggle" ngbRadioGroup >
+  <label ngbButtonLabel class="btn btn-success">
+    <input ngbButton type="radio" value="profesor" [(ngModel)]="rol"/>Profesor
+  </label>
+  <label ngbButtonLabel class="btn btn-success ">
+    <input ngbButton type="radio" value="estudiante" [(ngModel)]="rol"/>Estudiante
+  </label>
+  <label ngbButtonLabel class="btn btn-success">
+    <input ngbButton type="Radio" value="administrativo" [(ngModel)]="rol"/>Administrativo
+  </label>
+</div>
+<br>
+<div class="btn-group btn-group-toggle">
+<label class="btn btn-danger" ngbButtonLabel>
+  <input ngbButton type="checkbox"  [(ngModel)]="estado.antiguo"/>Antiguo
+</label>
+<label class="btn btn-danger" ngbButtonLabel>
+  <input ngbButton type="checkbox"  [(ngModel)]="estado.nuevo"/>Nuevo
+</label>
+<label class="btn btn-danger" ngbButtonLabel>
+  <input ngbButton type="checkbox"  [(ngModel)]="estado.aspirante"/>Aspirante
+</label>
+</div>
+<br>
+<br>
+<button class="btn btn-primary" ngbButton (click)="captura()">ok</button>
+<br>
+<br>
+<label >{{saludo}}</label>
